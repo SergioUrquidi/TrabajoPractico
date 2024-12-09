@@ -581,6 +581,7 @@ const taskController = {
 module.exports = taskController;
 
 // src/routes/index.js
+
 const express = require('express');
 const router = express.Router();
 const userRoutes = require('./user.routes');
@@ -592,12 +593,14 @@ router.use('/tasks', taskRoutes);
 module.exports = router;
 
 // src/routes/user.routes.js
+
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/user.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
 // Rutas públicas
+
 router.post('/', userController.createUser);
 router.get('/', userController.getAllUsers);
 router.post('/login', userController.login);
@@ -613,6 +616,7 @@ router.get('/:id/tasks', userController.getUserTasks);
 module.exports = router;
 
 // src/routes/task.routes.js
+
 const express = require('express');
 const router = express.Router();
 const taskController = require('../controllers/task.controller');
@@ -630,6 +634,7 @@ router.delete('/:id', taskController.deleteTask);
 module.exports = router;
 
 // src/app.js
+
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
@@ -655,6 +660,7 @@ app.use((req, res) => {
 module.exports = app;
 
 // migrations/YYYYMMDDHHMMSS-create-users.js
+
 'use strict';
 
 module.exports = {
@@ -695,6 +701,7 @@ module.exports = {
 };
 
 // migrations/YYYYMMDDHHMMSS-create-tasks.js
+
 'use strict';
 
 module.exports = {
