@@ -29,7 +29,7 @@ PROYECTO RESULTO: CÓDIGO FUENTE
 {
   "name": "tasks-api",
   "version": "1.0.0",
-  "description": "Task management API",
+  "description": "TRABAJO API",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
